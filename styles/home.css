@@ -28,6 +28,10 @@ body {
   background-color: #c05cbb;
 }
 
+.logout > i {
+  margin-left: 10px;
+}
+
 .container {
   margin-top: 80px;
   justify-content: center;
@@ -45,6 +49,10 @@ body {
   color: #333333;
 }
 
+.todo-section-top {
+  margin-bottom: 20px;
+}
+
 .todo-section > h1 {
   font-size: 20px;
   margin-bottom: 25px;
@@ -55,7 +63,7 @@ body {
   width: 85%;
   border-radius: 15px;
   margin-bottom: 15px;
-  padding: 15px;
+  padding: 17px;
   color: #63055e;
   box-shadow: 0 0 10px #9f0c983a;
 }
@@ -87,6 +95,11 @@ body {
   justify-content: space-between;
   padding: 10px 15px 10px 0;
   border-bottom: #646464 1px solid;
+  gap: 15px;
+}
+
+.todo-item > label {
+  flex-grow: 1;
 }
 
 .todo-item > label > input {
@@ -95,14 +108,14 @@ body {
   margin-right: 15px;
 }
 
-.todo-item > i {
-  color: #63055e;
+.todo-item > .delete-todo {
+  color: #960c0c;
 }
 
 .todo-item > i:hover {
   color: #ffffff;
 }
 
-.crossed-todo {
+.completed {
   text-decoration: line-through;
 }

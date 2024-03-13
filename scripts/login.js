@@ -15,7 +15,7 @@ function checkLoggedUser() {
 window.onload = checkLoggedUser();
 
 loginBtn.addEventListener("click", function () {
-    incorrectCredentialsNote.classList.add("hide");
+    incorrectCredentialsNote.classList.add("hidden");
 
     const username = usernameInput.value;
     const password = passwordInput.value;
@@ -27,7 +27,7 @@ loginBtn.addEventListener("click", function () {
         document.location.href = "../index.html";
     }
     else {
-        incorrectCredentialsNote.classList.remove("hide");
+        incorrectCredentialsNote.classList.remove("hidden");
         incorrectCredentialsNote.classList.add("incorrect-credentials-note");
     }
 });

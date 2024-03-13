@@ -10,6 +10,28 @@
   flex-direction: column;
 }
 
-.hide {
-    display: none;
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+.space-between {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.small-text {
+  font-size: 14px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+
+.completed {
+  text-decoration: line-through;
 }

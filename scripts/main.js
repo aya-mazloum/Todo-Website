@@ -12,7 +12,7 @@ function checkLoggedUser() {
     }
 };
 
-window.onload = checkLoggedUser();
+//window.onload = checkLoggedUser();
 
 window.addEventListener('beforeunload', function (e) {
     const remember = localStorage.getItem("remember");
@@ -32,6 +32,7 @@ function todoItemGenerator(todo) {
                 <label>
                     <input type="checkbox" class="todo-done-checkbox" ${isChecked}>${todo.title}
                 </label>
+                <i class="fa-regular fa-pen-to-square"></i>
                 <i class="fa-solid fa-xmark delete-todo"></i>
             </div>`;
 }
@@ -65,7 +66,7 @@ for (let i = 0; i < todoDoneCheckBoxes.length; i++) {
         const changedTodo = document.getElementById(todoItemId);
         const changedTodolabel = changedTodo.firstElementChild;
         if (checkbox.checked) {
-            changedTodolabel.classList.add("crossed-todo");
+            changedTodolabel.classList.add("completed");
             const todoList = JSON.parse(localStorage.getItem("todoList")) || [];
             const newTodoList = deleteTodoItemWithId(todoList, 'id', todoItemId);
             const updatedTodoItem = findTodoItemWithId(todoList, 'id', todoItemId);
@@ -74,8 +75,8 @@ for (let i = 0; i < todoDoneCheckBoxes.length; i++) {
             localStorage.setItem("todoList", JSON.stringify(todoList));
         }
         else{
-            if(changedTodolabel.classList.toggle("crossed-todo"))
-                changedTodolabel.classList.remove("crossed-todo");
+            if(changedTodolabel.classList.toggle("completed"))
+                changedTodolabel.classList.remove("completed");
                 const todoList = JSON.parse(localStorage.getItem("todoList")) || [];
                 const newTodoList = deleteTodoItemWithId(todoList, 'id', todoItemId);
                 const updatedTodoItem = findTodoItemWithId(todoList, 'id', todoItemId);

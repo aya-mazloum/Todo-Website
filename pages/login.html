@@ -8,21 +8,30 @@
     <link rel="stylesheet" href="../styles/common/utilities.css" />
 </head>
 <body>
-    <div class="login-container">
+    <div class="container">
         <img src="../assets/login-bg.jpg" />
 
-        <div class="login-box">
-            <h1>USER LOGIN</h1>
-            <p class="hide" id="incorrectCredentialsNote">Incorrect username or password!</p>
-            <input type="text" class="username-btn" id="username" placeholder="Username" />
-            <br/>
-            <input type="password" class="password-btn" id="password" placeholder="Password" />
-            <br/>
-            <label class="remember-me">
+        <div class="box flex column center hidden">
+            <h1>LOGIN</h1>
+            <p class="hidden" id="incorrectCredentialsNote">Incorrect username or password!</p>
+            <input type="text" class="username-btn small-text" id="username" placeholder="Username or email" />
+            <input type="password" class="password-btn small-text" id="password" placeholder="Password" />
+            <label class="remember-me small-text">
                 <input type="checkbox" id="rememberMe"/>Remember Me
             </label>
-            <br/>
-            <button class="login-btn" id="login">Log In</button>
+            <button class="submit-btn bold" id="login">Log In</button>
+            <p class="small-text">Don't have an account? <span class="signup-link">Signup</span></p>
+        </div>
+
+        <div class="box flex column center">
+            <h1>SIGNUP</h1>
+            <p class="hidden" id="incorrectCredentialsNote">Incorrect username or password!</p>
+            <input type="text" class="small-text" id="username" placeholder="Username" />
+            <input type="text" class="small-text" id="email" placeholder="Email" />
+            <input type="password" class="small-text" id="password" placeholder="Password" />
+            <input type="password" class="small-text" id="confirm-password" placeholder="Confirm password" />
+            <button class="submit-btn bold" id="signup">Sign up</button>
+            <p class="small-text">Already have an account? <span class="signup-link">Login</span></p>
         </div>
     </div>
 

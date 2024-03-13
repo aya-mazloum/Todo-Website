@@ -15,12 +15,12 @@ img {
   object-fit: contain;
 }
 
-.login-container {
+.container {
   position: relative;
   height: 100vh;
 }
 
-.login-container > img {
+.container > img {
   position: absolute;
   top: 0;
   left: 0;
@@ -28,7 +28,7 @@ img {
   object-fit: cover;
 }
 
-.login-box {
+.box {
   position: absolute;
   width: 300px;
   top: 25%;
@@ -40,14 +40,13 @@ img {
   backdrop-filter: blur(5px);
   text-align: center;
   color: #63055e;
+  gap: 10px;
 }
 
-.login-box > h1 {
+.box > h1 {
   font-size: 25px;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
-
-
 
 .incorrect-credentials-note {
   color: red;
@@ -56,17 +55,17 @@ img {
   display: block;
 }
 
-.login-box > input {
+.box > input {
   height: 20px;
   width: 200px;
   border-radius: 15px;
-  margin-bottom: 15px;
   padding: 15px;
   color: #63055e;
   box-shadow: 0 0 10px #9f0c979a;
+  font-size: 14px;
 }
 
-.login-box > input:focus {
+.box > input:focus {
   outline: none;
   border: 1px solid #a61f9f;
 }
@@ -79,14 +78,20 @@ input[type="checkbox"] {
   margin-right: 10px;
 }
 
-.login-btn {
+.submit-btn {
   color: white;
   background-color: #63055e;
-  margin-top: 15px;
   padding: 8px 30px;
   border-radius: 15px;
+  width: fit-content;
+  margin-top: 10px;
 }
 
-.login-btn:hover {
+.submit-btn:hover {
   background-color: #c05cbb;
+}
+
+.signup-link {
+  color: #a61f9f;
+  cursor: pointer;
 }
